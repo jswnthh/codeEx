@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Code Explainer</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>C++ Code Explainer</h1>
+            <p class="intro">Paste any C++ code and click on a line to get a simple English explanation.</p>
+        </header>
+        
+        <div class="code-container">
+            <div class="code-editor">
+                <div class="editor-header">
+                    <span>C++ Code</span>
+                    <div class="editor-buttons">
+                        <button id="analyzeBtn">Analyze</button>
+                    </div>
+                </div>
+                <div id="codeEditor"></div>
+            </div>
+            
+            <div class="explanation-panel">
+                <div class="explanation-header">
+                    <h3>Explanation</h3>
+                    <p>Click on a line of code to see its explanation</p>
+                </div>
+                <div id="explanationContent" class="explanation-content">
+                    <p>No line selected yet. Click on a line of code to see its explanation.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="examples">
+            <h3>Example Code</h3>
+            <div class="example-buttons">
+                <button class="example-btn" data-example="hello">Hello World</button>
+                <button class="example-btn" data-example="loop">For Loop</button>
+                <button class="example-btn" data-example="function">Functions</button>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Use</h3>
+            <ol>
+                <li>Paste your C++ code in the editor or select an example</li>
+                <li>Click on any line of code to get an explanation</li>
+                <li>Use the "Explain All" button to explain the entire program</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
